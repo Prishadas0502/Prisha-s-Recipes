@@ -12,41 +12,49 @@
 </head>
 <body>
     <!--Header Start-->
-        <header id="header" class="shadow bg-light">
-            <nav class="container navbar">
-                <a href="/index.html" class="nav-brand text-dark">Prisha's Recipes</a>
+<header id="header" class="shadow bg-light">
+    <nav class="container navbar">
+        <!-- Brand Name -->
+        <a href="index.html" class="nav-brand text-dark">Prisha's Recipes</a>
 
-                <!--Toggle button-->
-                <button class="toggle-button">
-                    <span><i class="fas fa-bars"></i></span>
-                </button>
+        <!-- Toggle Button for Mobile -->
+        <button class="toggle-button">
+            <span><i class="fas fa-bars"></i></span>
+        </button>
 
-                <!--Collapse on toggle button-->
-                <div class="collapse">
-                    <ul class="navbar-nav">
-                        <a href="#" class="nav-link">Home</a>
-                        <a href="#" class="nav-link">Blog</a>
-                        <a href="#" class="nav-link">Pages</a>
-                        <a href="#" class="nav-link">Categories</a>
-                        <a href="#" class="nav-link">About</a>
-                        <a href="#" class="nav-link">Contact</a>
-                    </ul>
+        <!-- Navbar Links -->
+        <div class="collapse">
+            <ul class="navbar-nav">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Blog</a>
+                <a href="#" class="nav-link">Pages</a>
+                <a href="#" class="nav-link">Categories</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+            </ul>
+        </div>
+
+        <!-- Search & Social Media -->
+        <div class="collapse">
+            <ul class="navbar-nav">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <a href="#" class="nav-link" id="searchIcon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    <input type="text" id="searchBar" class="hidden" placeholder="Search blog posts..." onkeyup="searchPosts()">
                 </div>
-                <!--Collapse on toggle button-->
-                <div class="collapse">
-                    <ul class="navbar-nav">
-                        <div class="search-box">
-                            <a href="#" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        </div>
-                        <a href="#" class="nav-link"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="nav-link"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="nav-link"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="nav-link"><i class="fa-brands fa-youtube"></i></a>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-    <!--Header End-->
+
+                <!-- Social Media Links -->
+                <a href="#" class="nav-link"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="nav-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="nav-link"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="nav-link"><i class="fa-brands fa-youtube"></i></a>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- Header End -->
 
     <!--Main Site Start-->
     <main id="site-main">

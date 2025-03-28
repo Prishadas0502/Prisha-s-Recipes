@@ -149,6 +149,31 @@ a{
     width: calc(33.3333% - 20px);
     margin-bottom:3em;
 }
+
+.hidden {
+    display: none;
+}
+
+.search-box {
+    position: relative;
+    display: inline-block;
+}
+
+#searchBar {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+}
+
+.search-box input:not(.hidden) {
+    display: block;
+}
+
 /*---------Main end---------*/
 
 /*---Media Queries---*/
