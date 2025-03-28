@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes Blog</title>
+    <!--CSS File-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Paneer.css">
+    <!--Font awesome icons cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--Header Start-->
+    <header id="header" class="shadow bg-light">
+        <nav class="container navbar">
+            <a href="/index.html" class="nav-brand text-dark">Prisha's Recipes</a>
+
+            <!--Toggle button-->
+            <button class="toggle-button">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!--Collapse on toggle button-->
+            <div class="collapse">
+                <ul class="navbar-nav">
+                    <a href="/index.html" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Blog</a>
+                    <a href="#" class="nav-link">Pages</a>
+                    <a href="#" class="nav-link">Categories</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </ul>
+            </div>
+            <!--Collapse on toggle button-->
+            <div class="collapse">
+                <ul class="navbar-nav">
+                    <div class="search-box">
+                        <a href="#" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    <a href="#" class="nav-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="nav-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="nav-link"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="nav-link"><i class="fa-brands fa-youtube"></i></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--Header End-->
+    <!--Main Start-->
+    <div class="about">
+        <div class="overlay3"></div>
+        <div class="about-content">
+            <p class="yr">Paneer Tikka Recipe 🧀🔥</p>
+        </div>
+    </div>
+    <div class="container">
+        <p class="text-center ad">Prep Time: 15 mins | Cook Time: 15 mins | Total Time: 30 mins | Servings: 3</p>
+        
+        <h2>Introduction</h2>
+        <p>Paneer Tikka is a popular Indian appetizer made with marinated paneer and veggies, grilled to perfection. It’s smoky, flavorful, and a great starter for any meal!</p>
+        
+        <h2>Ingredients</h2>
+        <h4>For Marination:</h4>
+        <ul>
+            <li>200g paneer (cubed)</li>
+            <li>½ cup thick yogurt (curd)</li>
+            <li>1 tbsp gram flour (besan)</li>
+            <li>1 tsp ginger-garlic paste</li>
+            <li>1 tbsp lemon juice</li>
+            <li>1 tsp red chili powder</li>
+            <li>½ tsp turmeric powder</li>
+            <li>1 tsp garam masala</li>
+            <li>1 tsp coriander powder</li>
+            <li>½ tsp cumin powder</li>
+            <li>½ tsp chaat masala</li>
+            <li>1 tbsp mustard oil (or any oil)</li>
+            <li>Salt to taste</li>
+        </ul>
+        
+        <h4>For Grilling:</h4>
+        <ul>
+            <li>½ cup diced bell peppers (red, yellow, green)</li>
+            <li>½ cup diced onion</li>
+            <li>½ cup diced tomatoes (optional)</li>
+            <li>Butter or oil for grilling</li>
+        </ul>
+        
+        <h2>Instructions</h2>
+        <ol>
+            <li><strong>Prepare the Marinade:</strong> In a bowl, mix yogurt, besan, ginger-garlic paste, lemon juice, and all the spices. Add mustard oil and whisk until smooth.</li>
+            <li><strong>Marinate the Paneer & Veggies:</strong> Add paneer cubes, bell peppers, and onions to the marinade. Coat everything well and let it rest for 30 minutes (or up to 2 hours for better flavor).</li>
+            <li><strong>Skewering & Grilling:</strong> Thread paneer and veggies onto skewers, alternating them. Grill on a pan with butter, in an oven at 200°C for 10-15 mins, or on a tandoor until slightly charred.</li>
+            <li><strong>Serving:</strong> Sprinkle some chaat masala and lemon juice. Serve hot with mint chutney and onion rings.</li>
+        </ol>
+        
+        <h2>Tips for the Best Paneer Tikka</h2>
+        <ul>
+            <li>✅ Use fresh and firm paneer for the best texture.</li>
+            <li>✅ Soak wooden skewers in water for 15 minutes to prevent burning.</li>
+            <li>✅ If using an oven, turn the skewers halfway for even cooking.</li>
+        </ul>
+        
+        <p class="fw-bold">🔥 Enjoy your homemade Paneer Tikka! Let me know how it turned out in the comments below!</p>
+        
+        <!-- Comment Section -->
+        <h2 class="comment-section">Comments</h2>
+        <textarea id="comment" rows="3" placeholder="Write your comment here..."></textarea>
+        <button class="btn" onclick="addComment()">Post Comment</button>
+        
+        <ul class="comment-list" id="commentList"></ul>
+    </div>
+    <!--Main End-->
+
+    <!--Custom JS-->
+    <script src="main.js"></script>
+    <script src="Comments.js"></script>
+
+</body>
+</html>
