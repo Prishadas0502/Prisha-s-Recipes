@@ -100,13 +100,20 @@
         </ul>
         
         <p class="fw-bold">🔥 Enjoy your homemade Paneer Tikka! Let me know how it turned out in the comments below!</p>
-        
+
         <!-- Comment Section -->
-        <h2 class="comment-section">Comments</h2>
-        <textarea id="comment" rows="3" placeholder="Write your comment here..."></textarea>
-        <button class="btn" onclick="addComment()">Post Comment</button>
-        
-        <ul class="comment-list" id="commentList"></ul>
+        <div class="comment-container">
+            <h2 class="comment-section">Comments</h2>
+    
+            <input type="text" id="commenterName" class="form-control mb-2" placeholder="Your Name">
+            <textarea id="comment" class="form-control" rows="3" placeholder="Write your comment here..."></textarea>
+    
+            <button id="postCommentBtn" class="btn btn-primary mt-2">Post Comment</button>
+
+            <ul class="comment-list mt-3" id="commentList"></ul>
+        </div>
+
+
     </div>
     <!--Main End-->
 

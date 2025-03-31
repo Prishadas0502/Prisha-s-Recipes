@@ -188,6 +188,10 @@ a{
     opacity: 1;
 }
 
+.card-body a:hover{
+    color: var(--secondary)
+}
+
 
 /*---------Main end---------*/
 
