@@ -6,27 +6,72 @@ toggle.addEventListener('click',function(){
 })
 
 
-// Search
-document.getElementById("searchIcon").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default link behavior
+document.addEventListener("DOMContentLoaded", function () {
     let searchBar = document.getElementById("searchBar");
-    
-    // Toggle the search bar visibility
-    if (searchBar.classList.contains("hidden")) {
-        searchBar.classList.remove("hidden");
-        searchBar.focus(); // Automatically focus on the input
-    } else {
-        searchBar.classList.add("hidden");
-    }
-});
+    let searchIcon = document.getElementById("searchIcon");
+    let grid = document.querySelector(".grid");
 
-function searchPosts() {
-    let input = document.getElementById('searchBar').value.toLowerCase();
-    let posts = document.querySelectorAll('.grid-item');
-
-    posts.forEach(post => {
-        let title = post.querySelector('.text-title').innerText.toLowerCase();
-        post.style.display = title.includes(input) ? 'block' : 'none';
+    // Initialize Masonry
+    let msnry = new Masonry(grid, {
+        itemSelector: ".grid-item",
+        columnWidth: 20,
+        percentPosition: true
     });
-}
 
+    // Ensure Masonry updates after all images load
+    imagesLoaded(grid, function () {
+        msnry.layout();
+    });
+
+    // Toggle search bar visibility
+    searchIcon.addEventListener("click", function (event) {
+        event.preventDefault();
+        searchBar.style.display = searchBar.style.display === "block" ? "none" : "block";
+        if (searchBar.style.display === "block") {
+            searchBar.focus();
+        }
+    });
+
+    // Search functionality
+    searchBar.addEventListener("input", function () {
+        let searchText = this.value.toLowerCase();
+        let items = document.querySelectorAll(".grid-item");
+
+        items.forEach(item => {
+            let title = item.querySelector(".text-title").innerText.toLowerCase();
+            if (title.includes(searchText)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+
+        // Recalculate Masonry layout after search
+        setTimeout(() => {
+            msnry.reloadItems();
+            msnry.layout();
+        }, 500);
+    });
+
+    // Category filter
+    document.querySelectorAll('input[name="category"]').forEach(radio => {
+        radio.addEventListener("change", function () {
+            let selectedCategory = this.value;
+            let items = document.querySelectorAll(".grid-item");
+
+            items.forEach(item => {
+                if (selectedCategory === "all" || item.classList.contains(selectedCategory)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+
+            // Recalculate Masonry layout after filtering
+            setTimeout(() => {
+                msnry.reloadItems();
+                msnry.layout();
+            }, 300);
+        });
+    });
+});

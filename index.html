@@ -11,7 +11,7 @@
    
 </head>
 <body>
-    <!--Header Start-->
+    <!-- Header Start -->
 <header id="header" class="shadow bg-light">
     <nav class="container navbar">
         <!-- Brand Name -->
@@ -26,8 +26,6 @@
         <div class="collapse">
             <ul class="navbar-nav">
                 <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link">Blog</a>
-                <a href="#" class="nav-link">Pages</a>
                 <a href="#" class="nav-link">Categories</a>
                 <a href="#" class="nav-link">About</a>
                 <a href="#" class="nav-link">Contact</a>
@@ -42,7 +40,7 @@
                     <a href="#" class="nav-link" id="searchIcon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
-                    <input type="text" id="searchBar" class="hidden" placeholder="Search blog posts..." onkeyup="searchPosts()">
+                    <input type="text" id="searchBar" placeholder="Search blog posts..." onkeyup="searchPosts()">
                 </div>
 
                 <!-- Social Media Links -->
@@ -55,15 +53,21 @@
     </nav>
 </header>
 <!-- Header End -->
+ <!--Category radio-->
+ <div class="filter-container text-center my-3">
+    <label><input type="radio" name="category" value="all" checked> All</label>
+    <label><input type="radio" name="category" value="veg"> Veg</label>
+    <label><input type="radio" name="category" value="non-veg"> Non-Veg</label>
+</div>
 
     <!--Main Site Start-->
     <main id="site-main">
         <!--Blog Post Section-->
         <section id="posts">
             <div class="container">
-                <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 20 }'>
+                <div class="grid">
                     <!--Article Start-->
-                    <div class="grid-item">
+                    <div class="grid-item veg">
                         <article class="article">
                             <div class="card">
                                 <div class="overflow-img">
@@ -85,7 +89,7 @@
                     </div>
                     <!--Article End-->
                     <!--Article Start-->
-                    <div class="grid-item">
+                    <div class="grid-item veg">
                         <article class="article">
                             <div class="card">
                                 <div class="overflow-img">
@@ -107,7 +111,7 @@
                     </div>
                     <!--Article End-->
                     <!--Article Start-->
-                    <div class="grid-item">
+                    <div class="grid-item veg">
                         <article class="article">
                             <div class="card">
                                 <div class="overflow-img">
@@ -129,12 +133,12 @@
                     </div>
                     <!--Article End-->
                     <!--Article Start-->
-                    <div class="grid-item">
+                    <div class="grid-item veg">
                         <article class="article">
                             <div class="card">
                                 <div class="overflow-img">
                                     <a href="#">
-                                        <img src="Images/Samosa.jpg" class="img-fluid" alt="Dhokla">
+                                        <img src="Images/Samosa.jpg" class="img-fluid" alt="Samosa">
                                     </a>
                                 </div>
                                 <div class="card-body text-center px-1">
@@ -151,12 +155,12 @@
                     </div>
                     <!--Article End-->
                     <!--Article Start-->
-                    <div class="grid-item">
+                    <div class="grid-item veg">
                         <article class="article">
                             <div class="card">
                                 <div class="overflow-img">
                                     <a href="#">
-                                        <img src="Images/Veg-Momos.jpeg" class="img-fluid" alt="Dhokla">
+                                        <img src="Images/Veg-Momos.jpeg" class="img-fluid" alt="Veg Momos">
                                     </a>
                                 </div>
                                 <div class="card-body text-center px-1">
@@ -173,12 +177,12 @@
                     </div>
                     <!--Article End-->
                     <!--Article Start-->
-                    <div class="grid-item">
+                    <div class="grid-item non-veg">
                         <article class="article">
                             <div class="card">
                                 <div class="overflow-img">
                                     <a href="#">
-                                        <img src="Images/Chicken-Momos.jpg" class="img-fluid" alt="Dhokla">
+                                        <img src="Images/Chicken-Momos.jpg" class="img-fluid" alt="Chicken Momos">
                                     </a>
                                 </div>
                                 <div class="card-body text-center px-1">
@@ -195,12 +199,12 @@
                     </div>
                     <!--Article End-->
                     <!--Article Start-->
-                    <div class="grid-item">
+                    <div class="grid-item non-veg">
                         <article class="article">
                             <div class="card">
                                 <div class="overflow-img">
                                     <a href="#">
-                                        <img src="Images/Chicken-Tikka.jpg" class="img-fluid" alt="Dhokla">
+                                        <img src="Images/Chicken-Tikka.jpg" class="img-fluid" alt="Chicken Tikka">
                                     </a>
                                 </div>
                                 <div class="card-body text-center px-1">
@@ -217,12 +221,12 @@
                     </div>
                     <!--Article End-->
                     <!--Article Start-->
-                    <div class="grid-item">
+                    <div class="grid-item non-veg">
                         <article class="article">
                             <div class="card">
                                 <div class="overflow-img">
                                     <a href="#">
-                                        <img src="Images/Afgani-Chicken.png" class="img-fluid" alt="Dhokla">
+                                        <img src="Images/Afgani-Chicken.png" class="img-fluid" alt="Afgani Chicken">
                                     </a>
                                 </div>
                                 <div class="card-body text-center px-1">
@@ -239,12 +243,12 @@
                     </div>
                     <!--Article End-->
                     <!--Article Start-->
-                    <div class="grid-item">
+                    <div class="grid-item veg">
                         <article class="article">
                             <div class="card">
                                 <div class="overflow-img">
                                     <a href="#">
-                                        <img src="Images/Idli.jpeg" class="img-fluid" alt="Dhokla">
+                                        <img src="Images/Idli.jpeg" class="img-fluid" alt="Idli">
                                     </a>
                                 </div>
                                 <div class="card-body text-center px-1">
@@ -261,12 +265,12 @@
                     </div>
                     <!--Article End-->
                     <!--Article Start-->
-                    <div class="grid-item">
+                    <div class="grid-item veg">
                         <article class="article">
                             <div class="card">
                                 <div class="overflow-img">
                                     <a href="#">
-                                        <img src="Images/dahi-bhalla.jpeg" class="img-fluid" alt="Dhokla">
+                                        <img src="Images/dahi-bhalla.jpeg" class="img-fluid" alt="Dahi Bhalla">
                                     </a>
                                 </div>
                                 <div class="card-body text-center px-1">
@@ -292,6 +296,7 @@
     <script src="main.js"></script>
 
     <!--Masonary Library CDN-->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
