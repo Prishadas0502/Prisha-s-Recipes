@@ -1,0 +1,21 @@
+.about4{
+    position: relative;
+    background: url('Images/Chicken-Tikka.jpg') center/cover no-repeat;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+.about4 .overlay3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 0, 0, 0.3); /* Dark Red Overlay */
+}
+.about4-content{
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    margin: auto;
+}
