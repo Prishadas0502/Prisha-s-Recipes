@@ -1,10 +1,9 @@
 let toggle = document.querySelector("#header .toggle-button");
 let collapse = document.querySelectorAll("#header .collapse");
 
-toggle.addEventListener('click',function(){
-    collapse.forEach(col=>col.classList.toggle("collapse-toggle"))
-})
-
+toggle.addEventListener('click', function () {
+    collapse.forEach(col => col.classList.toggle("collapse-toggle"));
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     let searchBar = document.getElementById("searchBar");
@@ -35,15 +34,33 @@ document.addEventListener("DOMContentLoaded", function () {
     // Search functionality
     searchBar.addEventListener("input", function () {
         let searchText = this.value.toLowerCase();
-        let items = document.querySelectorAll(".grid-item");
+        let items = Array.from(document.querySelectorAll(".grid-item"));
+
+        let matchedItems = [];
+        let unmatchedItems = [];
 
         items.forEach(item => {
             let title = item.querySelector(".text-title").innerText.toLowerCase();
             if (title.includes(searchText)) {
-                item.style.display = "block";
+                matchedItems.push(item);
             } else {
-                item.style.display = "none";
+                unmatchedItems.push(item);
             }
+        });
+
+        // Move matched items to the top
+        matchedItems.forEach(item => grid.prepend(item));
+
+        // Hide unmatched items
+        unmatchedItems.forEach(item => {
+            item.style.visibility = "hidden";
+            item.style.opacity = "0";
+        });
+
+        // Show matched items
+        matchedItems.forEach(item => {
+            item.style.visibility = "visible";
+            item.style.opacity = "1";
         });
 
         // Recalculate Masonry layout after search
@@ -57,14 +74,32 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('input[name="category"]').forEach(radio => {
         radio.addEventListener("change", function () {
             let selectedCategory = this.value;
-            let items = document.querySelectorAll(".grid-item");
+            let items = Array.from(document.querySelectorAll(".grid-item"));
+
+            let matchedItems = [];
+            let unmatchedItems = [];
 
             items.forEach(item => {
                 if (selectedCategory === "all" || item.classList.contains(selectedCategory)) {
-                    item.style.display = "block";
+                    matchedItems.push(item);
                 } else {
-                    item.style.display = "none";
+                    unmatchedItems.push(item);
                 }
+            });
+
+            // Move matched items to the top
+            matchedItems.forEach(item => grid.prepend(item));
+
+            // Hide unmatched items
+            unmatchedItems.forEach(item => {
+                item.style.visibility = "hidden";
+                item.style.opacity = "0";
+            });
+
+            // Show matched items
+            matchedItems.forEach(item => {
+                item.style.visibility = "visible";
+                item.style.opacity = "1";
             });
 
             // Recalculate Masonry layout after filtering
